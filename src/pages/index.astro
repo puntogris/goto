@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="goto.puntogris">
+  <main>
+    <h1>goto.</h1>
+    <p class="instructions">
+      <strong>Open-source</strong>
+      tools that I regularly use, created by me and available on
+      <a href="https://www.github.com/puntogris">
+        <code>github.com/puntogris</code>
+      </a>
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://draw.puntogris.com/"
+        title="Draw"
+        body="Drawing site using Exalidraw."
+      />
+      <Card
+        href="https://kompress.puntogris.com/"
+        title="Kompress"
+        body="Compress videos using ffmpeg."
+      />
+      <Card
+        href="Nina"
+        title="Nina"
+        body="Convert to webp/jpeg and resize images."
+      />
+      <Card
+        href="https://astro.build/themes/"
+        title="Scarlett"
+        body="Xml to svg"
+      />
+      <Card
+        href="https://mp3.puntogris.com/"
+        title="mp3"
+        body="Dowload audio from youtube as mp3."
+      />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 900px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: rgba(var(--accent-dark), 33%);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: medium;
+  }
+  code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+    text-decoration: none;
+  }
+  code:hover {
+    text-decoration: underline;
+  }
+  a {
+    text-decoration: none;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
