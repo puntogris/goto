@@ -6,9 +6,9 @@ import Card from "../components/Card.astro";
 <Layout title="goto.puntogris">
   <main>
     <h1>goto.</h1>
-    <p class="instructions">
-      <strong>Open-source</strong>
-      tools that I regularly use, created by me and available on
+    <p class="description">
+      Quck access to <strong>open-source</strong>
+      tools I regularly use, created by me and available on
       <a href="https://www.github.com/puntogris">
         <code>github.com/puntogris</code>
       </a>
@@ -20,9 +20,9 @@ import Card from "../components/Card.astro";
         body="Drawing site using Exalidraw."
       />
       <Card
-        href="https://kompress.puntogris.com/"
-        title="Kompress"
-        body="Compress videos using ffmpeg."
+        href="https://bean.puntogris.com/"
+        title="bean"
+        body="Compress videos using FFmpeg."
       />
       <Card
         href="Nina"
@@ -60,13 +60,16 @@ import Card from "../components/Card.astro";
     text-align: center;
     margin-bottom: 1em;
   }
-  .instructions {
+  .description {
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
     background: rgba(var(--accent-dark), 33%);
     padding: 1rem;
     border-radius: 8px;
     font-size: medium;
+  }
+  .description strong {
+    color: rgb(var(--accent-light));
   }
   code {
     font-size: 0.8em;
@@ -82,9 +85,6 @@ import Card from "../components/Card.astro";
   }
   a {
     text-decoration: none;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
   }
   .link-card-grid {
     display: grid;
